@@ -18,8 +18,9 @@ function App() {
 
   return (
     <div id='page' onClick={handleClick}> 
-    {JSON.stringify(list)}
-      <span className='dot' />
+      {list.map((item) => (
+        <span className='dot' />
+      ))}
     </div>
   )
 }
