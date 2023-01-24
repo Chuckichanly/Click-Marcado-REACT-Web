@@ -19,7 +19,7 @@ function App() {
   return (
     <div id='page' onClick={handleClick}> 
       {list.map((item) => (
-        <span className='dot' />
+        <span className='dot' style={{left: item.clientX, top: item.clientY}}/>
       ))}
     </div>
   )
