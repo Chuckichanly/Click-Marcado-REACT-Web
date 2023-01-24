@@ -16,8 +16,14 @@ function App() {
     setList((prev) => [...prev, newDot]);
   };
 
+  const handleUndo = (event) => {
+    event.stopPropagation();
+    console.log('undo');
+  }
+
   return (
-    <div id='page' onClick={handleClick}> 
+    <div id='page' onClick={handleClick}>
+      <button onClick={handleUndo}>Desfazer</button>
       {list.map((item) => (
         <span className='dot' style={{left: item.clientX, top: item.clientY}}/>
       ))}
