@@ -13,11 +13,12 @@ function App() {
     }
 
     console.log(newDot);
-    // setList();
+    setList((prev) => [...prev, newDot]);
   };
 
   return (
     <div id='page' onClick={handleClick}> 
+    {JSON.stringify(list)}
       <span className='dot' />
     </div>
   )
