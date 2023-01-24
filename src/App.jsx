@@ -57,8 +57,10 @@ function App() {
     <div id='page' onClick={handleClick}>
       <button onClick={handleUndo}>Desfazer</button>
       <button onClick={handleRedo}>Refazer</button>
-      {list.map((item) => (
-        <span className='dot' style={{left: item.clientX, top: item.clientY}}/>
+      {list.map((item, index) => (
+        <span 
+        key = {index}
+        className='dot' style={{left: item.clientX, top: item.clientY}}/>
       ))}
     </div>
   )
