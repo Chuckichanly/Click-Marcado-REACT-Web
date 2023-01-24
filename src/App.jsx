@@ -3,10 +3,17 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [list, setList] = useState([])
 
   const handleClick = (event) => {
-    console.log(event)
+
+    const newDot = {
+      clientX: event.clientX,
+      clientY: event.clientY,
+    }
+
+    console.log(newDot);
+    // setList();
   };
 
   return (
