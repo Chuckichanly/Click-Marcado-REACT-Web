@@ -19,6 +19,11 @@ function App() {
   const handleUndo = (event) => {
     event.stopPropagation();
     console.log('undo');
+
+    setList((prev) => {
+      const newArr = [...prev].slice(0,-1);
+      return newArr;
+    })
   }
 
   return (
